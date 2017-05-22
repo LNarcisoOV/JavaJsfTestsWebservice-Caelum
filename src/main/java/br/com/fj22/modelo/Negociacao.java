@@ -10,7 +10,7 @@ public class Negociacao {
 
 	public Negociacao(double preco, int quantidade, Calendar data) {
 		if (data == null) {
-			throw new IllegalArgumentException("Data nao pode ser nula");
+			throw new IllegalArgumentException("Data nao pode ser nula.");
 		}
 		this.preco = preco;
 		this.quantidade = quantidade;
