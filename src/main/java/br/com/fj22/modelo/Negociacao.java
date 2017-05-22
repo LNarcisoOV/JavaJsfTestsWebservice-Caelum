@@ -9,7 +9,9 @@ public class Negociacao {
 	private final Calendar data;
 
 	public Negociacao(double preco, int quantidade, Calendar data) {
-		super();
+		if (data == null) {
+			throw new IllegalArgumentException("Data nao pode ser nula");
+		}
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.data = data;
@@ -38,6 +40,16 @@ public class Negociacao {
 
 	public double getVolume() {
 		return preco * quantidade;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Negociacao [preco=" + preco + ", quantidade=" + quantidade + ", data=" + data + "]";
 	}
 
 }

@@ -12,7 +12,6 @@ public final class Candlestick {
 	private final Calendar data;
 
 	public Candlestick(double abertura, double fechamento, double minimo, double maximo, double volume, Calendar data) {
-		super();
 		this.abertura = abertura;
 		this.fechamento = fechamento;
 		this.minimo = minimo;
@@ -69,6 +68,17 @@ public final class Candlestick {
 
 	public boolean isBaixa() {
 		return this.abertura > this.fechamento;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Candlestick [abertura=" + abertura + ", fechamento=" + fechamento + ", minimo=" + minimo + ", maximo="
+				+ maximo + ", volume=" + volume + ", data=" + data + "]";
 	}
 
 }
