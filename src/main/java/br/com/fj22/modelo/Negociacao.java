@@ -52,4 +52,9 @@ public class Negociacao {
 		return "Negociacao [preco=" + preco + ", quantidade=" + quantidade + ", data=" + data + "]";
 	}
 
+	public boolean isMesmoDia(Calendar mesmoMomento) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

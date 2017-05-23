@@ -24,4 +24,12 @@ public class NegociacaoTest {
 	public void naoCriaNegociacaoComDataNula(){
 		new Negociacao(22.0d, 0, null);
 	}
+	
+	@Test
+	public void mesmoMilissegundoEDoMesmoDia() {
+		Calendar agora = Calendar.getInstance();
+		Calendar mesmoMomento = (Calendar) agora.clone();
+		Negociacao negociacao = new Negociacao(40.0, 100, agora);
+		Assert.assertTrue(negociacao.isMesmoDia(mesmoMomento));
+	}
 }
