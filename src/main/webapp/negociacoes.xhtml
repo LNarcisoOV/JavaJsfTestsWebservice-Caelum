@@ -17,9 +17,12 @@
 			<p:column headerText="Quantidade">
 				<h:outputText value="#{negociacao.quantidade}" />
 			</p:column>
+			<p:column headerText="Volume">
+				<h:outputText value="#{negociacao.volume}" />
+			</p:column>
 			<p:column headerText="Data">
-				<h:outputText value="#{negociacao.data.time}" >
-					<f:convertDateTime pattern="dd/MM/yyyy"/>
+				<h:outputText value="#{negociacao.data.time}">
+					<f:convertDateTime pattern="dd/MM/yyyy" />
 				</h:outputText>
 			</p:column>
 		</p:dataTable>
