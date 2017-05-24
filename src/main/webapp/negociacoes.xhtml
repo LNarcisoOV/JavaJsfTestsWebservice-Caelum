@@ -10,7 +10,7 @@
 </h:head>
 <h:body>
 	<h:form>
-		<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}">
+		<p:dataTable var="negociacao" value="#{argentumBean.negociacoes}" paginator="true" rows="15">
 			<p:column headerText="Preço">
 				<h:outputText value="#{negociacao.preco}" />
 			</p:column>
